@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form id="myForm">
+      <label>Data:</label><br>
+      <input type="text" name="data"><br>
+      
+      <!-- Adicione os outros campos conforme necessário -->
+      
+      <input type="button" value="Registrar" onclick="registrar()">
+    </form>
+    <script>
+      function registrar() {
+        var form = document.getElementById("myForm");
+        google.script.run.registrarOpcao(form.data.value, /* adicione os outros campos */);
+        google.script.host.close();
+      }
+    </script>
+  </body>
+</html>
